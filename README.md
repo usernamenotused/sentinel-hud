@@ -5,6 +5,10 @@ your Wayland desktop, under every window. Built on
 [Quickshell](https://quickshell.org). Every readout comes from the real
 system; nothing on screen is decorative.
 
+![Sentinel HUD](docs/screenshot.png)
+
+<sub>Screenshot uses the made-up data in `demo/` (see [Demo mode](#demo-mode)).</sub>
+
 - **Identity & network**: user@host, kernel, uptime, link/SSID, address,
   gateway, live rx/tx, VPN tunnels, DNS servers and whether DNS-over-TLS is on
 - **System load**: CPU, memory, CPU temperature, load average, disks, battery
@@ -100,6 +104,16 @@ Cached state (update counts, known devices, name lookups) lives in
 
 ```bash
 rm ~/.local/state/sentinel-hud/updates
+```
+
+## Demo mode
+
+`SENTINEL_HUD_DEMO=1` makes the HUD show the made-up data in `demo/` instead
+of your machine's. Use it for screenshots, so you don't publish your IPs,
+device names or Wi-Fi name, or to work on the layout:
+
+```bash
+SENTINEL_HUD_DEMO=1 qs -p .
 ```
 
 ## Notes

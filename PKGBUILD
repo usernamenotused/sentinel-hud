@@ -33,6 +33,7 @@ package() {
   local share="$pkgdir/usr/share/$_pkgname"
   install -Dm644 -t "$share" shell.qml Hud.qml NetMap.qml config.example sweep-networks.example
   install -Dm755 -t "$share" hud.sh netmap.sh
+  install -Dm644 -t "$share/demo" demo/hud.json demo/netmap.json
   install -Dm755 sentinel-hud "$pkgdir/usr/bin/sentinel-hud"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"

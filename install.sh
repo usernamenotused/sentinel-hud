@@ -54,6 +54,7 @@ case "${1:-}" in
   need
   mkdir -p "$data" "$bin"
   for f in "${files[@]}"; do install -m "$([[ $f == *.sh || $f == sentinel-hud ]] && echo 755 || echo 644)" "$here/$f" "$data/$f"; done
+  mkdir -p "$data/demo" && cp "$here"/demo/*.json "$data/demo/"
   ln -sfn "$data/sentinel-hud" "$bin/sentinel-hud"
   seed_config
   cat <<MSG

@@ -17,6 +17,12 @@ Item {
   // Skip animations (Omarchy passes its reduce-motion setting through).
   property bool reduceMotion: false
 
+  // SENTINEL_HUD_DEMO=1 shows the made-up data in demo/ instead of this
+  // machine's (for screenshots and layout work).
+  readonly property bool demo: (Quickshell.env("SENTINEL_HUD_DEMO") || "") !== ""
+  function source(name) {
+    return demo ? ["cat", script("demo/" + name + ".json")] : [script(name + ".sh")]
+  }
   function script(name) { return decodeURIComponent(Qt.resolvedUrl(name).toString().replace("file://", "")) }
   property var d: ({})
   property var net: ({})
@@ -32,7 +38,7 @@ Item {
 
   Process {
     id: hudProc
-    command: [root.script("hud.sh")]
+    command: root.source("hud")
     stdout: StdioCollector {
       waitForEnd: true
       onStreamFinished: { try { root.d = JSON.parse(String(text || "{}")) } catch (e) {} }
@@ -40,7 +46,7 @@ Item {
   }
   Process {
     id: netProc
-    command: [root.script("netmap.sh")]
+    command: root.source("netmap")
     stdout: StdioCollector {
       waitForEnd: true
       onStreamFinished: { try { root.net = JSON.parse(String(text || "{}")) } catch (e) {} }

@@ -1,0 +1,27 @@
+{
+  "user": "operator", "host": "sentinel", "kernel": "6.17.7-arch1-1", "up": 279000,
+  "load": "1.42 1.18 0.97", "cpu": 23, "mem": 41, "temp": 54,
+  "bat": 78, "batState": "Discharging", "batWatts": 92,
+  "disks": [ { "mount": "/", "pct": 46, "gb": 931 }, { "mount": "/boot", "pct": 12, "gb": 1 }, { "mount": "/mnt/archive", "pct": 83, "gb": 3726 } ],
+  "dev": "wlan0", "ip": "10.20.0.42", "gw": "10.20.0.1", "ssid": "SENTINEL-NET", "vpn": "wg0",
+  "dns": "10.20.0.1 9.9.9.9", "dot": "+DNSOverTLS",
+  "rx": 2411724, "tx": 318402,
+  "fw": "active", "estab": 14, "failed": "", "authfail": 0,
+  "listen": [ { "proto": "tcp", "port": "22", "proc": "sshd" }, { "proto": "udp", "port": "5353", "proc": "avahi-daemon" } ],
+  "fwstats": { "total": 37, "spark": [0, 1, 0, 3, 2, 0, 5, 8, 4, 2, 6, 6],
+    "top": [ { "src": "203.0.113.47", "n": 19, "port": "TCP/22" }, { "src": "198.51.100.12", "n": 11, "port": "TCP/3389" }, { "src": "203.0.113.200", "n": 7, "port": "UDP/1900" } ] },
+  "log": [
+    { "t": "14:02:11", "kind": "fw", "msg": "BLOCK TCP 203.0.113.47 -> :22" },
+    { "t": "14:01:58", "kind": "sys", "msg": "systemd-resolved: Using degraded feature set UDP instead of TLS for DNS server 9.9.9.9." },
+    { "t": "14:01:40", "kind": "fw", "msg": "BLOCK TCP 198.51.100.12 -> :3389" },
+    { "t": "13:58:22", "kind": "sys", "msg": "kernel: wlan0: disconnect from AP for new auth to AP" },
+    { "t": "13:55:03", "kind": "fw", "msg": "BLOCK UDP 203.0.113.200 -> :1900" }
+  ],
+  "updates": 12, "secUpdates": 2, "updAge": 1260,
+  "repoRoots": "~/Projects",
+  "repos": [
+    { "name": "sentinel-hud", "branch": "main", "ab": "+0 -0", "dirty": 0 },
+    { "name": "dotfiles", "branch": "main", "ab": "+2 -0", "dirty": 3 },
+    { "name": "homelab", "branch": "wireguard", "ab": "+0 -1", "dirty": 0 }
+  ]
+}

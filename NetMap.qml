@@ -48,7 +48,7 @@ Item {
       var b = (m === 1 ? 270 : 198 + 144 * j / (m - 1)) * Math.PI / 180
       var rr = (j % 2 === 0) ? 112 : 148
       var w = wan[j]
-      out.push({ id: w.id, kind: "wan", x: gwX + rr * Math.cos(b), y: gwY + rr * 0.85 * Math.sin(b), px: gwX, py: gwY,
+      out.push({ id: w.id, kind: "wan", x: gwX + rr * Math.cos(b), y: gwY + rr * 0.72 * Math.sin(b), px: gwX, py: gwY,
                  label: w.label, sub: w.blocked >= 0 && !w.conns ? "blocked " + w.port
                         : (w.conns + " conn" + (w.conns === 1 ? "" : "s") + (w.hosts > 1 ? " · " + w.hosts + " hosts" : "")),
                  conns: w.conns, blocked: w.blocked, port: w.port, isnew: false })

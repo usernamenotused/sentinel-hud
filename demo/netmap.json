@@ -1,0 +1,30 @@
+{
+  "online": true,
+  "host": "sentinel",
+  "ip": "10.20.0.42",
+  "net": "10.20.0.0/24",
+  "gw": "10.20.0.1",
+  "sweep": "off",
+  "window": 600,
+  "lan": [
+    {"id": "10.20.0.1", "kind": "gateway", "label": "router", "ip": "10.20.0.1", "vendor": "", "state": "REACHABLE", "conns": 2, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.5", "kind": "lan", "label": "nas", "ip": "10.20.0.5", "vendor": "Synology", "state": "REACHABLE", "conns": 3, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.8", "kind": "lan", "label": "printer", "ip": "10.20.0.8", "vendor": "Brother", "state": "STALE", "conns": 0, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.11", "kind": "lan", "label": "10.20.0.11", "ip": "10.20.0.11", "vendor": "Raspberry Pi", "state": "REACHABLE", "conns": 1, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.17", "kind": "lan", "label": "living-room-tv", "ip": "10.20.0.17", "vendor": "", "state": "STALE", "conns": 0, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.23", "kind": "lan", "label": "10.20.0.23", "ip": "10.20.0.23", "vendor": "private MAC", "state": "REACHABLE", "conns": 0, "isnew": true, "blocked": -1, "port": ""},
+    {"id": "10.20.0.31", "kind": "lan", "label": "workstation", "ip": "10.20.0.31", "vendor": "Intel Corporate", "state": "REACHABLE", "conns": 2, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.44", "kind": "lan", "label": "10.20.0.44", "ip": "10.20.0.44", "vendor": "Espressif", "state": "STALE", "conns": 0, "isnew": false, "blocked": 140, "port": "UDP/1900"},
+    {"id": "10.20.0.52", "kind": "lan", "label": "phone", "ip": "10.20.0.52", "vendor": "private MAC", "state": "STALE", "conns": 0, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.60", "kind": "lan", "label": "10.20.0.60", "ip": "10.20.0.60", "vendor": "Espressif", "state": "STALE", "conns": 0, "isnew": false, "blocked": -1, "port": ""},
+    {"id": "10.20.0.77", "kind": "lan", "label": "laptop", "ip": "10.20.0.77", "vendor": "private MAC", "state": "REACHABLE", "conns": 0, "isnew": false, "blocked": -1, "port": ""}
+  ],
+  "wan": [
+    {"id": "wan:github.com", "kind": "wan", "label": "github.com", "ip": "", "vendor": "", "state": "", "conns": 4, "isnew": false, "blocked": -1, "port": "", "hosts": 3},
+    {"id": "wan:archlinux.org", "kind": "wan", "label": "archlinux.org", "ip": "", "vendor": "", "state": "", "conns": 2, "isnew": false, "blocked": -1, "port": "", "hosts": 1},
+    {"id": "wan:203.0.113.47", "kind": "wan", "label": "203.0.113.47", "ip": "", "vendor": "", "state": "", "conns": 0, "isnew": false, "blocked": 35, "port": "TCP/22", "hosts": 0},
+    {"id": "wan:198.51.100.12", "kind": "wan", "label": "198.51.100.12", "ip": "", "vendor": "", "state": "", "conns": 0, "isnew": false, "blocked": 210, "port": "TCP/3389", "hosts": 0},
+    {"id": "wan:cloudflare.com", "kind": "wan", "label": "cloudflare.com", "ip": "", "vendor": "", "state": "", "conns": 3, "isnew": false, "blocked": -1, "port": "", "hosts": 2},
+    {"id": "wan:wireguard-vpn", "kind": "wan", "label": "vpn.example.net", "ip": "", "vendor": "", "state": "", "conns": 1, "isnew": false, "blocked": -1, "port": "", "hosts": 1}
+  ]
+}
