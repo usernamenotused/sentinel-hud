@@ -167,10 +167,19 @@ Item {
     }
   }
 
+  // Top of the highest node label (a two-line label above a node takes ~36px).
+  readonly property real topLabelY: {
+    var top = height
+    for (var i = 0; i < placed.length; i++) top = Math.min(top, placed[i].y - 36)
+    return top
+  }
+
   // ── header + legend ──
+  // The header rises above the highest node so remote-host labels never
+  // collide with it.
   Column {
     anchors.horizontalCenter: parent.horizontalCenter
-    y: 0
+    y: Math.min(0, map.topLabelY - height - 10)
     spacing: 2
     Text {
       anchors.horizontalCenter: parent.horizontalCenter
