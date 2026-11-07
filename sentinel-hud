@@ -1,0 +1,10 @@
+#!/bin/bash
+# Run the Sentinel HUD under plain Quickshell.
+# Looks for the HUD next to this script first (git checkout), then in the
+# packaged location.
+here="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+for dir in "$here" "${XDG_DATA_HOME:-$HOME/.local/share}/sentinel-hud" /usr/share/sentinel-hud; do
+  [[ -f $dir/shell.qml ]] && exec qs -p "$dir" "$@"
+done
+echo "sentinel-hud: shell.qml not found" >&2
+exit 1

@@ -1,0 +1,8 @@
+# Personal: your gateway MACs. Lives in ~/.config/sentinel-hud/ instead.
+sweep-networks
+config
+# makepkg output
+/sentinel-hud/
+/src/
+/pkg/
+*.pkg.tar.*

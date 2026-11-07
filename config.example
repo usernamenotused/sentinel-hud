@@ -1,0 +1,5 @@
+# Sentinel HUD settings. Copy to ~/.config/sentinel-hud/config.
+# This file is sourced by bash, so use bash syntax.
+
+# Directories searched (3 levels deep) for git repos shown in the REPOS panel.
+REPO_ROOTS=("$HOME/Projects" "$HOME/Work" "$HOME/Code" "$HOME/src" "$HOME/dev")

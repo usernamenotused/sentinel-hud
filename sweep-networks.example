@@ -1,0 +1,11 @@
+# Gateway MACs of networks where the HUD may run its ping sweep, one per line.
+# Anything after the MAC is a free-form note.
+#
+# Only list networks you own or are authorised to scan. Without this file the
+# HUD stays fully passive.
+#
+# Copy to ~/.config/sentinel-hud/sweep-networks and edit. Find your
+# gateway's MAC with:
+#   ip neigh show "$(ip route show default | awk '{print $3; exit}')"
+#
+# aa:bb:cc:dd:ee:ff  home router

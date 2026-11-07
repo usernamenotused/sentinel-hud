@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "sentinel.hud",
+  "name": "Sentinel HUD",
+  "version": "1.0.0",
+  "author": "unnu",
+  "description": "Live system, network and security readouts drawn over the desktop while the Sentinel theme is active.",
+  "kinds": ["service"],
+  "entryPoints": { "service": "Service.qml" }
+}
